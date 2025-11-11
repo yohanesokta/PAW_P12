@@ -34,6 +34,7 @@ $result = mysqli_query($conn, $sql);
     <th>Name</th>
     <th>Location</th>
     <th>Image</th>
+    <th>Date</th>
     <th>Action</th>
   </tr>
 
@@ -43,6 +44,8 @@ $result = mysqli_query($conn, $sql);
     <td><?php echo $row['nama']; ?></td>
     <td><?php echo $row['location']; ?></td>
     <td><img src='uploads/<?php echo $row['foto']; ?>' width='80'></td>
+    <td><?php echo $row['date']; ?></td>
+
     <td>
       <a href='edit.php?id=<?php echo $row['id']; ?>'>Edit</a> |
       <a href='delete.php?id=<?php echo $row['id']; ?>'>Delete</a>
